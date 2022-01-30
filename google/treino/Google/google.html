@@ -5,19 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google</title>
-    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>
-        <img src="googlelogo.png" alt="logo Google" class= "logo">
-    </p>
-    <p> 
-        <input type="text" id= "textbox" class="textbox">
-    </p>
-    <p> 
-        <input type="button" value="Pesquisa Google" class="button">
-        <input type="button" value="Estou com sorte" class="button">
-    </p>
+<div class="container">
+    <header>
+        <div class="header">            
+            <p><a href="https://mail.google.com/mail/u/0/" target="_blank" class="externo">Gmail</a></p>
+            <p><a href="https://www.google.com.br/imghp?hl=pt-BR&ogbl" target="_blank" class="externo">Imagens</a></p>
+            <p><img src="images/apps.png" alt="apps Google" style="height:20px;"></p>
+            <p><img src="images/self.jpg" alt="self" style= "width:40px;"></p>
+        </div>
+    </header>
+    <main>
+     <div class="logo">
+        <img src="images/googlelogo.png" id="google" alt="logo Google">
+    </div>
+    <div class="textbox"> 
+        <img src="images/lupa.png" alt="lupa" id="lupa">
+        <input type="text" id= "textbox">
+        <img src="images/teclado.png" alt="keyboard" id="keyboard">
+        <img src="images/google-mic-seeklogo.com.svg" alt="mic" id="mic">       
+    </div>
+    <div class="search"> 
+        <div class= "button">
+        <input type="button" value="Pesquisa Google" id="button1">
+        </div>
+        <div class= "button">
+        <input type="button" value="Estou com sorte" id="button2">
+        </div>
+    </div>
+    </main>
+    <footer>
+        <div class="bar1"><a>Brasil</a></div>       
+        <div class="bar2">
+            <a href="">Sobre</a>
+            <a href="">Publicidade</a>
+            <a href="">Negocios</a>
+            <a href="">Como funciona a Pesquisa</a>
+        </div>
+    </footer>
+</div>
 </body>
 </html>
