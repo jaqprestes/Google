@@ -5,35 +5,42 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100%;
   height: 100%;
+  font: 10px #dfe1e5 'Helvetica Neue', Helvetica, Arial;
 }
 
 .container {
-  width: 100vw;
-  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 8vh 80vh 6vh 6vh;
-  grid-template-areas: 'header' 'main' 'footer1' 'footer2';
+  grid-template-rows: 8vh 80vh 12vh;
+  grid-template-areas: 'header' 'main' 'footer';
 }
 
-.header {
-  background-color: #ffffff;
+header {
+  background-color: #fff;
   grid-area: header;
   display: flex;
   flex-direction: row;
   justify-content: right;
-  text-align: right;
-  position: relative;
-  font: 10px #dfe1e5 'Helvetica Neue', Helvetica, Arial;
+  align-items: center;
+  padding: 0px 20px;
 }
 
-p {
-  margin: 10px;
-  position: relative;
-  align-self: center;
- }
+header img {
+  height: 20px;
+}
+
+header .apps{
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+}
+
+header .apps:hover{
+  background-color: red;
+  transition:.12s;
+}
 
 main {
   background-color: #ffffff;
@@ -47,20 +54,18 @@ main {
 
 #google {
   width: 220px;
-  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .textbox {
   background-color: #ffffff;
   width: 420px;
   border-radius: 30px;
-  margin: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  position: relative;
   border: 1px solid #dfe1e5;
+  margin-bottom: 10px;
 }
 
 .textbox:hover {
@@ -68,9 +73,8 @@ main {
 }
 
 #textbox {
-  width: 350px;
-  margin: 10px;
   border: 0px;
+  width:100%;
 }
 
 #lupa {
@@ -96,8 +100,7 @@ main {
   display: flex;
 }
 
-#button1,
-#button2 {
+.search button {
   width: 120px;
   height: 30px;
   margin: 10px;
@@ -106,14 +109,9 @@ main {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#button1:hover {
+.search button:hover {
   box-shadow: 2px 2px 3px #dfe1e5;
   border: 10px #a19e9e;
-}
-
-#button2:hover {
-  box-shadow: 2px 2px 3px #dfe1e5;
-  border: 1px #a19e9e;
 }
 
 footer {
@@ -121,23 +119,16 @@ footer {
   justify-content:space-between;
   background-color: #dfe1e5;
   text-align: left;
+  grid-area: footer;
 }
 
-.bar1{
-  grid-area: footer1;
-  background-color: #f0f1f3;
-  height: 100%;
-  max-width: 100%;
+footer div {
   display: flex;
+  background-color: #dfe1e5;
 }
 
-.bar2{
-  grid-area: footer2;
-  background-color: #f0f1f3;
-  grid-area:left;
-  height: 100%;
-  max-width: 100%;
-  display: flex;
+footer div + div {
+  border-top: 1px solid red;
 }
 
 a {
